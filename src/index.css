@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+body {
+  background: #efeae3;
+  font-family: sans-serif;
+}
+
+.animate-slider1:hover {
+  animation-play-state: paused;
+}
+
+@theme {
+  --animate-ani1: ani1 3s ease-in infinite alternate;
+  --animate-ani2: ani2 3s ease-in infinite alternate;
+  --animate-ani3: CTASlider 3s ease-in infinite alternate;
+  --animate-slider1: slider1 12s linear infinite;
+  --animate-shap1: Shap1 3s infinite alternate linear;
+  --animate-shap2: Shap2 4s infinite alternate linear;
+
+  @keyframes ani1 {
+    from {
+      transform: translate(-20%, -30%);
+    }
+    to {
+      transform: translate(-10%, 10%);
+    }
+  }
+
+  @keyframes ani2 {
+    from {
+      transform: translate(0%, 0%);
+    }
+    to {
+      transform: translate(-90%, 20%);
+    }
+  }
+
+  @keyframes CTASlider {
+    from {
+      transform: translate(-5%, 10%);
+    }
+    to {
+      transform: translate(5%, -6%);
+    }
+    
+  }
+
+  @keyframes slider1 {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes Shap1 {
+    from {
+      rotate: -10deg;
+    }
+    to {
+      rotate: -20deg;
+    }
+  }
+  @keyframes Shap2 {
+    from {
+      rotate: 30deg;
+    }
+    to {
+      rotate: 45deg;
+    }
+  }
+}
