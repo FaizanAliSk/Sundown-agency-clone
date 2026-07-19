@@ -1,16 +1,36 @@
-# React + Vite
+# Sundown Studio Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive frontend clone of the Sundown Studio website built with **React**, **Vite**, **Tailwind CSS**, and **Swiper.js**. This project was created to improve my frontend development skills by recreating a modern, animation-rich website.
 
-Currently, two official plugins are available:
+## 🚀 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* React
+* Vite
+* Tailwind CSS
+* Swiper.js
+* JavaScript (ES6+)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Responsive design
+* Smooth CSS animations
+* Interactive sliders using Swiper.js
+* Modern UI inspired by Sundown Studio
+* Component-based React architecture
 
-## Expanding the ESLint configuration
+## 📚 What I Learned
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+During this project, I improved my skills in:
+
+* Tailwind CSS utility-first styling
+* React component structure and reusability
+* Swiper.js implementation
+* Creating smooth CSS animations
+* Building responsive layouts for different screen sizes
+* Writing cleaner and more organized frontend code
+
+## 🎯 Purpose
+
+The main goal of this project was to strengthen my frontend development skills by recreating a real-world website design and practicing modern UI development techniques.
+
+> **Note:** This project is built for learning and portfolio purposes only. All design inspiration belongs to Sundown Studio.
