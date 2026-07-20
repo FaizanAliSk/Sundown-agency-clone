@@ -65,7 +65,7 @@ const ConpanyCards = () => {
             >
                 {companycard.map((e, idx) => {
                     return <SwiperSlide>
-                        <div className='w-90 md:w-100 px-10 border-l border-gray-500'>
+                        <div className='w-90 md:w-100 px-10 border-l border-gray-500' key={idx}>
                             <div className='mb-5'>
                                 <img src={e.image} className='w-30' />
                             </div>

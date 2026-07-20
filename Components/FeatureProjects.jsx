@@ -1,54 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { projects } from '../src/assets/assets';
 
 const FeatureProjects = () => {
 
-  const projects = [
-    {
-      title: "Play New Kidvision",
-      company: "NIKE",
-      category: "Environment",
-      img: "https://images.unsplash.com/photo-1782392487647-7fee9715d1f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8Q0R3dXdYSkFiRXd8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "SOHO NYC",
-      company: "ARC'TERYX",
-      category: "Environment",
-      img: "https://images.unsplash.com/photo-1779896412317-5768a1911afb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "Makers Studio HOI",
-      company: "NIKE",
-      category: "Experiential",
-      img: "https://media.istockphoto.com/id/2242721518/photo/modern-podcast-studio-with-two-armchairs-microphones-and-soft-lighting-setup.webp?a=1&b=1&s=612x612&w=0&k=20&c=gURzlxQCHYlGD1rW5zQ9Tvc2Xdqd3V770G9_rt7WKhk=",
-    },
-    {
-      title: "SOHO 2023",
-      company: "CONVERSE",
-      category: "Environment",
-      img: "https://images.unsplash.com/photo-1517963140-f60c9eceb504?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29ob3xlbnwwfHwwfHx8MA%3D%3D",
-    },
-    {
-      title: "NYFW Popup",
-      company: "AFTERPAY",
-      category: "Experiential",
-      img: "https://plus.unsplash.com/premium_photo-1669075651564-2089e87a9920?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c29ob3xlbnwwfHwwfHx8MA%3D%3D",
-    },
-    {
-      title: "Air Force 1 2021",
-      company: "NIKE",
-      category: "Environment",
-      img: "https://images.unsplash.com/photo-1543691110-1c7d6b1927f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNvaG98ZW58MHx8MHx8fDA%3D",
-    },
-    {
-      title: "50th Anniversary",
-      company: "NIKE",
-      category: "Environment",
-      img: "https://plus.unsplash.com/premium_photo-1760482627258-7bc6a3819f1e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNvaG98ZW58MHx8MHx8fDA%3D",
-    },
-  ];
-
   const [showImage, SetShowImage] = useState(false);
   const [image, setImage] = useState(null);
+
+  useEffect(() => {
+    projects.forEach((project) => {
+      const img = new Image();
+      img.src = project.img;
+    });
+  }, []);
 
   return (
     <div>
@@ -66,7 +29,7 @@ const FeatureProjects = () => {
 
         {projects.map((e, idx) => {
 
-          return <div className='relative border-b-1 border-gray-400 flex justify-between pl-10 pr-5 before:-z-10 py-10 overflow-hidden before:transition-all before:absolute before:-top-full hover:before:top-0 before:left-0 before:w-full before:h-full before:bg-[#ff9831]' onMouseEnter={() => setImage(e.img)}>
+          return <div className='relative border-b-1 border-gray-400 flex justify-between pl-10 pr-5 before:-z-10 py-10 overflow-hidden before:transition-all before:absolute before:-top-full hover:before:top-0 before:left-0 before:w-full before:h-full before:bg-[#ff9831]' onMouseEnter={() => setImage(e.img)} key={idx}>
 
             <div>
               <h2 className='text-5xl font-bold'>{e.title}</h2>
@@ -89,7 +52,7 @@ const FeatureProjects = () => {
           return <div>
 
             <div className='w-full h-80 rounded-3xl overflow-hidden'>
-              <img src={e.img} alt={'project' + (idx + 1)} className='w-full h-full object-cover' />
+              <img src={e.img} alt={'project' + (idx + 1)} className='w-full h-full object-cover' loading='lazy' />
             </div>
 
             <div className='pl-3 mt-2 mb-5'>
