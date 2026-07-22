@@ -4,7 +4,7 @@ const ContentSlider = function () {
     
     return (
         <div className="overflow-hidden pt-5 pb-7 md:py-30">
-  <div className="flex w-max whitespace-nowrap uppercase items-center font-bold text-[8vw] md:text-[10vw] animate-slider1">
+  <div className="flex w-max whitespace-nowrap uppercase items-center font-bold text-[80px] md:text-[10vw] animate-slider1">
     
     {/* First */}
     <span className="mx-8">Contents</span>

@@ -4,11 +4,9 @@ import { BrandVideo } from '../src/assets/assets'
 
 const Video = () => {
   return (
-    <div className='w-full relative rounded-4xl overflow-hidden my-4'>
-
-    <video autoPlay loop muted src={BrandVideo} className='object-cover'></video>
-
-    </div>
+    <video autoPlay loop muted src={BrandVideo} 
+    className='object-cover w-full min-h-120 rounded-xl md:rounded-3xl z-50'>
+    </video>
   )
 }
 

@@ -56,8 +56,8 @@ const FeatureProjects = () => {
             </div>
 
             <div className='pl-3 mt-2 mb-5'>
-              <h2 className='text-2xl font-bold mb-2'>{e.title}</h2>
-              <p className='font-bold text-sm'>{e.company}: <span className='font-light text-gray-600'>{e.category}</span></p>
+              <h2 className='text-4xl font-bold mb-2'>{e.title}</h2>
+              <p className='font-bold'>{e.company}: <span className='font-light text-gray-600'>{e.category}</span></p>
             </div>
           </div>
 

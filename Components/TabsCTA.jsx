@@ -10,11 +10,11 @@ const TabsCTA = () => {
         <div className='w-full h-200 bg-black text-white rounded-2xl my-10  flex flex-col md:flex-row overflow-hidden'>
             <div className='w-full h-full  flex flex-wrap'>
 
-                    <div className='w-150 flex flex-col justify-center px-10'>
+                    <div className='w-150 pt-10 flex flex-col justify-center px-10'>
 
                         {tabs.map((e, idx)=> {
                             return <div key={idx}>
-                                <button className={`${e.id === activetab ? 'border-l-2 border-[#fd340c] text-[#fd340c]' : ''} pl-2 text-2xl md:text-7xl block w-40 cursor-pointer text-start`} onClick={() => setActivetab(e.id)}> {e.title} </button>
+                                <button className={`${e.id === activetab ? ' text-[#fd340c]' : ''} pl-2 text-2xl md:text-7xl block w-40 cursor-pointer text-start`} onClick={() => setActivetab(e.id)}> {e.title} </button>
                             </div>
                         })}
 
